@@ -197,6 +197,9 @@ With RowNum AS
 )
 Delete
 From
- nashville_housing_database.sheet1 USING nashville_housing_database.sheet1 Join RowNum on nashville_housing_database.sheet1.UniqueID = RowNum.UniqueID
+ nashville_housing_database.sheet1 
+	USING nashville_housing_database.sheet1 
+	Join RowNum 
+		on nashville_housing_database.sheet1.UniqueID = RowNum.UniqueID
 Where
  RowNum.row_num > 1
